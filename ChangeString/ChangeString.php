@@ -2,10 +2,13 @@
 Class ChangeString
 {
 
+  private $alfabeto  = array();
 
   public function __construct(){
-  	
+
+    $this->alfabeto = array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");  	
   }
+  
 
 
    public function Mayusculas($ncadena, $ocadena){
@@ -26,7 +29,7 @@ Class ChangeString
   
 
   public function Build ($cadena)
-  {  $alfabeto = array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
+  {  
     $ncadena = "";
     $caracter = "";
     $clave = 0;
@@ -34,13 +37,13 @@ Class ChangeString
     for ($i = 0; $i < strlen($cadena); $i++) {
     
     $caracter = strtolower($cadena[$i]);
-    $clave = array_search($caracter, $alfabeto);
+    $clave = array_search($caracter, $this->alfabeto);
     if ($clave !== FALSE)
     {   if ($clave === 26)
     	{
-    	$ncadena .= $alfabeto[0];
+    	$ncadena .= $this->alfabeto[0];
     	} else {
-    		$ncadena .= $alfabeto[$clave + 1];
+    		$ncadena .= $this->alfabeto[$clave + 1];
     	}
     } else {
 

@@ -29,4 +29,4 @@ echo '</li>';
 }
 ?>
 </ul>
-<a href="http://localhost/webEmpleado/index.php">Atras</a></td>
+<a href="../webEmpleado/index.php">Atras</a></td>

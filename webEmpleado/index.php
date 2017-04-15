@@ -32,7 +32,7 @@ foreach ($empleados as $key1 => $value1) {
  		echo '<td style="text-align: center;">' . $empleados[$key1]["email"] . '</td>';
  		echo '<td style="text-align: center;">' . $empleados[$key1]["position"] . '</td>';
  		echo '<td style="text-align: center;">' . $empleados[$key1]["salary"] . '</td>';
- 		echo '<td style="text-align: center;"><a href="http://localhost/webEmpleado/detalle.php?id='.$empleados[$key1]["id"] .'">Ir</a></td>';
+ 		echo '<td style="text-align: center;"><a href="../webEmpleado/detalle.php?id='.$empleados[$key1]["id"] .'">Ir</a></td>';
  	 echo '<tr>';
 }
 ?>
